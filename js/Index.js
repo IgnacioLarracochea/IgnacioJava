@@ -64,6 +64,7 @@ datos.addEventListener("submit", (event) => {
   const edad = edadValue.value;
   const pais = paisValue.value;
   const prestamo = prestamoValue.value;
+  
   //
   event.preventDefault();
   incomeAccount(nombre, dni, edad, pais, prestamo);

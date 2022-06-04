@@ -1,6 +1,20 @@
 //guardar usuario y contraseña en local storage y luego interactuar con el DOM
 
 const btn = document.getElementById("guardar");
+
+const guardar = document.querySelector("#guardar")
+
+guardar.addEventListener("click", (e)=>{
+e.preventDefault()
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Your work has been saved',
+    showConfirmButton: false,
+    timer: 1500
+  })
+
+})
 //inputs
 const emailValue = document.getElementById("email");
 const passwordValue = document.getElementById("contraseña");
@@ -48,5 +62,6 @@ function Save(email, password) {
     Mostrar.style.fontSize = "18px";
     Mostrar.style.fontWeight = "bolder";
     Mostrar.style.color = "#3fd323";
+    return true
   }
 }
