@@ -119,3 +119,26 @@ function incomeAccount(nombre, dni, edad, pais, prestamo) {
     return;
   }
 }
+const lista = document.querySelector('#listado')
+
+fetch('./data.json')
+  .then( (resp) => resp.json() )
+  .then( (data) => {
+    console.log(data);
+      data.forEach((pais) => {
+        const li = document.createElement('li')
+        li.innerHTML = `
+        <h4>${pais.iva.toUpperCase()}</h4>
+        <p>pais: ${pais}</p>
+        <p>iva: ${iva}</p>
+        `
+        lista.append(li)
+      })
+
+
+
+
+
+  })
+
+  console.log("Funciona");
